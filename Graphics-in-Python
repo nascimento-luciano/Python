@@ -1,0 +1,16 @@
+#Gráfico Básico
+import numpy as np
+import matplotlib.pyplot as plt
+
+A = 3; k = 4; w = 2;
+x = np.linspace(-2.2,2.2,1000);
+t = [0,0.5,2];
+for qt in range(0,len(t)):
+ y = A*np.cos(k*x-w*t[qt])
+ plt.subplot(3,1,qt+1)
+ plt.plot(x,y)
+ plt.grid()
+ plt.xticks(np.arange(-2,2.2,1),[])
+ plt.ylabel("y(x,t)")
+ xt = plt.xticks(np.arange(-2,2.2,1),["-2","-1","0","1","2"])
+ plt.xlabel("x(m)")
